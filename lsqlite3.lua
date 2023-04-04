@@ -1195,7 +1195,7 @@ end
 function sqlite_stmt:bind(n, value, bloblen)
 	local t = type(value)
 	if t == "string" then
-		self.db:check(sqlite3.sqlite3_bind_text(self.stmt, n, value, #value+1, sqlite3_transient))
+		self.db:check(sqlite3.sqlite3_bind_text(self.stmt, n, value, #value, sqlite3_transient))
 	elseif t == "number" then
 		self.db:check(sqlite3.sqlite3_bind_double(self.stmt, n, value))
 	elseif t == "boolean" then

@@ -1,0 +1,6 @@
+return {
+	_all = {
+		lpath = "?.lua",
+		cpath = "bin/linux64/?.so;bin/osx64/?.dylib;bin/mingw64/*.dll",
+	}
+}
